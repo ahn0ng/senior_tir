@@ -170,6 +170,9 @@ a:hover{color:#575757;}
         margin:0 auto;
         display: block;}
 
+aside p{font-family: 'Roboto Condensed', sans-serif;}
+aside span{font-family: 'Roboto Condensed', sans-serif;}
+
 
 /* map */
 
