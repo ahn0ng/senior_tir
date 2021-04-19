@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Stonehenge</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="jquery-3.6.0.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+    <body>
+        <div id="wrap">
+            <div id="map_wrap">
+            <div>
+                <div id="back"><a href="../uk.html"><img src="../../arrow.png" alt="" /></a></div>
+                <div id="landmark_name">
+                    <h1>Stonehenge</h1>
+                </div>
+            </div>
+
+        <div id="aside_wrap">
+            <aside >
+                <ul>
+                    <li><p>Stonehenge</p></li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.181260959622!2d-1.826215!3d51.17888199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873e63b850af611%3A0x979170e2bcd3d2dd!2sStonehenge!5e0!3m2!1sen!2skr!4v1618863146953!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span>Stonehenge is a prehistoric monument on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury. It consists of an outer ring of vertical Sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons, topped by connecting horizontal lintel stones. Inside is a ring of smaller bluestones. Inside these are free-standing trilithons, two bulkier vertical Sarsens joined by one lintel. The whole monument, now ruinous, is oriented towards the sunrise on the summer solstice. The stones are set within earthworks in the middle of the most dense complex of Neolithic and Bronze Age monuments in England, including several hundred tumuli (burial mounds).
+                    </span></li>
+                </ul>
+            </aside>
+
+            <button></button>
+        </div>
+        </div>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1618863092421!6m8!1m7!1sCAoSLEFGMVFpcE11dE92bXlUcXdmSzVzdTNfUktSekJGaklicHIxRkk2NEtFS25a!2m2!1d51.17888199999999!2d-1.826215!3f153.1381819372147!4f24.168929137871174!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+</body>
+</html>

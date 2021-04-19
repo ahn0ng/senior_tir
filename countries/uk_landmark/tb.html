@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Tower Bridge</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="jquery-3.6.0.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+    <body>
+        <div id="wrap">
+            <div id="map_wrap">
+            <div>
+                <div id="back"><a href="../uk.html"><img src="../../arrow.png" alt="" /></a></div>
+                <div id="landmark_name">
+                    <h1>Tower Bridge</h1>
+                </div>
+            </div>
+
+        <div id="aside_wrap">
+            <aside >
+                <ul>
+                    <li><p>Tower Bridge</p></li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4229316965316!2d-0.07535649999999999!3d51.5054564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603438b65db49%3A0x9e78421a085a6f2d!2sTower%20Bridge!5e0!3m2!1sen!2skr!4v1618862588435!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span>Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become a world-famous symbol of London. As a result, it is sometimes confused with London Bridge, about 0.5 miles (0.80 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.
+                    </span></li>
+                </ul>
+            </aside>
+
+            <button></button>
+        </div>
+        </div>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1618862564253!6m8!1m7!1sCAoSLEFGMVFpcE8xbEs0dFExU3p5Y0c2bTlFcURBamVkeEtRMVllNWNBWmdzMVJI!2m2!1d51.5054564!2d-0.07535649999999999!3f0.13514854758705042!4f15.704337903448334!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+</body>
+</html>

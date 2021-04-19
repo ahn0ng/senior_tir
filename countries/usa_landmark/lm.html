@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Lincoln Memorial</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 13px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="jquery-3.6.0.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="map_wrap">
+        <div>
+            <div id="back"><a href="../usa.html"><img src="../../arrow.png" alt="" /></a></div>
+            <div id="landmark_name">
+                <h1>Lincoln Memorial</h1>
+            </div>
+        </div>
+        <div id="aside_wrap">
+            <aside >
+                <ul>
+                    <li><p>Lincoln Memorial</p></li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.5178035859426!2d-77.05237004905916!3d38.88927275492776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b771e0906287%3A0x1049d1c9c95c2eb6!2sLincoln%20Memorial!5e0!3m2!1sen!2skr!4v1618857262448!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span>The Lincoln Memorial is a US national memorial built to honor the 16th President of the United States, Abraham Lincoln. It is on the western end of the National Mall in Washington, D.C., across from the Washington Monument, and is in the form of a neoclassical temple. The memorial's architect was Henry Bacon. The designer of the memorial interior's large central statue – Abraham Lincoln, 1920 – was Daniel Chester French; the Lincoln statue was carved by the Piccirilli Brothers. The painter of the interior murals was Jules Guerin, and the epithet above the statue was written by Royal Cortissoz. Dedicated in May 1922, it is one of several memorials built to honor an American president. It has always been a major tourist attraction and since the 1930s has been a symbolic center focused on race relations.
+                    </span></li>
+                </ul>
+            </aside>
+    
+            <button></button>
+    </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1617037143091!6m8!1m7!1s62v2y2d8s1LUwRrQu3SkMg!2m2!1d38.88936057079116!2d-77.04923142947398!3f237.26500676043352!4f12.417050999308032!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</body>
+</html>

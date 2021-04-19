@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Warwick Castle</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="jquery-3.6.0.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+    <body>
+        <div id="wrap">
+            <div id="map_wrap">
+            <div>
+                <div id="back"><a href="../uk.html"><img src="../../arrow.png" alt="" /></a></div>
+                <div id="landmark_name">
+                    <h1>Warwick Castle</h1>
+                </div>
+            </div>
+
+        <div id="aside_wrap">
+            <aside >
+                <ul>
+                    <li><p>Warwick Castle</p></li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9764.007485369644!2d-1.585228!3d52.279668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870cb4441162143%3A0x2959a3d7dd5df385!2sWarwick%20Castle!5e0!3m2!1sen!2skr!4v1618863373103!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                    <li><span>Warwick Castle is a medieval castle developed from a wooden fort, originally built by William the Conqueror during 1068. Warwick is the county town of Warwickshire, England, situated on a meander of the River Avon. The original wooden motte-and-bailey castle was rebuilt in stone during the 12th century. During the Hundred Years War, the facade opposite the town was refortified, resulting in one of the most recognisable examples of 14th-century military architecture. It was used as a stronghold until the early 17th century, when it was granted to Sir Fulke Greville by James I in 1604. Greville converted it to a country house, and it was owned by the Greville family (who became Earls of Warwick in 1759) until 1978, when it was bought by the Tussauds Group.
+                    </span></li>
+                </ul>
+            </aside>
+
+            <button></button>
+        </div>
+        </div>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1618863351303!6m8!1m7!1sCAoSLEFGMVFpcFBoY3dYSmcwM1lVRV9ISF80SDY0WC1CRDV5cWNHT1R1S2hDME9k!2m2!1d52.279668!2d-1.585228!3f67.32525654349074!4f18.902774624340296!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+</body>
+</html>
