@@ -26,7 +26,8 @@ a:hover{color:#575757;}
 
 
 #wrap{width:100%;
-        background: url(../bg.jpeg) fixed;}
+        background: url(../bg.jpeg) fixed;
+        background-size: cover;}
 
 #margin_wrap{width:1140px;
     margin:0 auto;
@@ -162,8 +163,11 @@ a:hover{color:#575757;}
                 line-height: 100px;
                 font-family: 'NIXGONL-Vb';}
 
-/* iframe{margin-left:x;} */
+#frame_wrap{width:1400px;}
 
+iframe{width:1035px;
+        margin:0 auto;
+        display: block;}
 
 /* map */
 
